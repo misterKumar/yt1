@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.video-thumbnail{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.video-title{
+    width: 95%;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    word-wrap: break-word;
+}
+.video-preview{
+    width: 100%;   
+    vertical-align: top;
+    overflow-x: hidden; 
+}
+.info-row{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    /* background-color: whitesmoke; */ 
+}
+
+.avtar-info img{
+    width: 100%;
+    border-radius: 50px;
+}
+.img-container{
+    position: relative;
+}
+.img-container .tool-tip{
+    background-color: white;
+    display: flex;
+    position: absolute;
+    bottom: 55px;
+    left: 2px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.15s;
+}       
+.img-container:hover .tool-tip{
+    opacity: 1;
+}       
+.img-container .tool-tip img{
+    width: 50px;
+    border-radius: 50px;
+
+}
+.img-container .tool-tip .info .name{
+    font-weight: bold;
+}
+.img-container .tool-tip .info .subscriber-count{
+    margin-top: 4px;
+    font-size: 14px;
+    color: rgb(157, 157, 157);
+}
+
+.video-author,.video-stats{
+    font-size: 12px;
+    color: rgb(96,96,96);
+    margin-left: 8px;
+
+}
+.video-author{
+    margin-bottom: 4px;
+}
+.grid-view{
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;   
+    row-gap: 40px;
+    margin-left: 16px;
+}
+
+
+@media (max-width:662px){
+    .grid-view{
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width:663px) and (max-width:940px) {
+    .grid-view{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:941px) and (max-width:1229px) {
+    .grid-view{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(min-width:1230px) {
+    .grid-view{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.thumbnail-row{
+    position: relative;
+}
+.time-stamp{
+    position: absolute;
+    bottom: 28px;
+    right: 4px;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 3px;
+}
